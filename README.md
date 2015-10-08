@@ -1,0 +1,1 @@
+weekly app based on Angular Seed.
