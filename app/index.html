@@ -20,12 +20,13 @@
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavCtrl">
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavCtrl as nav">
     <div class="container">
         <div style="float: left;"><img src="img/logo.png" height="50" width="50"></div>
-        <button ng-click="changeLocation('customers')" type="button" class="btn btn-default navbar-btn">Customers
+        <button ng-click="nav.changeLocation('customers')" type="button" class="btn btn-default navbar-btn">Customers
         </button>
-        <button ng-click="changeLocation('contact')" type="button" class="btn btn-default navbar-btn">Contact</button>
+        <button ng-click="nav.changeLocation('contact')" type="button" class="btn btn-default navbar-btn">Contact</button>
+        <button ng-click="nav.logout()" type="button" class="btn btn-default navbar-btn pull-right">Logout</button>
     </div>
 </nav>
 <!--<ul class="menu">-->
