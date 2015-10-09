@@ -11,7 +11,6 @@
             nav.logout = function() {
               nav.changeLocation('/login');
             };
-
         }]);
 
 })();

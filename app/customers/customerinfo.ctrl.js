@@ -1,22 +1,16 @@
-(function() {
+(function () {
 
     'use strict';
 
     angular.module('myApp.customers')
-        .controller('CustomerInfoCtrl', ['$scope', function ($scope) {
+        .controller('CustomerInfoCtrl', ['$routeParams', 'Customer', function ($routeParams, Customer) {
             var customerinfo = this;
-            customerinfo.customer = {
-                id: 0,
-                firstName: 'Joe',
-                lastName: 'Bobberson',
-                company: 'ESI',
-                address: '800 W Campbell Rd',
-                city: 'Richardson',
-                state: 'TX',
-                zip: '75080',
-                phone: '8322424304',
-                email: 'blargyblarg@blarg.org',
-                domain: 'Boss'
+
+            activate();
+            function activate() {
+                Customer.getByEmail($routeParams.email).then(function (data) {
+                    customerinfo.customer = data;
+                });
             }
         }]);
 })();
