@@ -1,3 +1,10 @@
-weekly app based on Angular Seed.
+CRUD MEANStack App originally based on Angular Seed.
 
-http://10.3.1.6:59000/customers.json
+Dependencies:
+ * Node/NPM
+ * Bower
+Setup instructions:
+ 1. Clone Repo
+ 2. >>npm install
+ 3. >>bower install
+ 4. navigate to localhost:5555 in a browser

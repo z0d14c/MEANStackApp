@@ -7,19 +7,23 @@
     Customer.$inject = ['$resource'];
 
     function Customer($resource) {
-        var Customer = $resource('http://10.3.1.6:59000/customers.json', null, {
+        var Customer = $resource('/customers/', null, {
             get: {
                 method: 'GET'
             },
             query: {
                 method: 'GET',
                 isArray: true
+            },
+            update: {
+                method: 'PUT'
             }
         });
 
         return {
             get: Customer.get,
             query: Customer.query,
+            update: Customer.update,
             getByEmail: _getByEmail
         };
 

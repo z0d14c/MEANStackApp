@@ -5,7 +5,7 @@
 
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/contact', {
-                templateUrl: 'contact/contact.html',
+                templateUrl: 'modules/contact/contact.html',
                 controller: 'ContactCtrl',
                 controllerAs: 'contact'
             });
